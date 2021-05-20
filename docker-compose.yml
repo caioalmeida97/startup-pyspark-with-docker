@@ -4,9 +4,9 @@ services:
   pyspark-service:
     build:
       context: .
-    user: caio
+    user: root
     working_dir: /opt/my_work_dir
-    image: pyspark-notebook
+    image: startup-pyspark-notebook
     ports:
       - 8086:8888
       - 4040:4040
