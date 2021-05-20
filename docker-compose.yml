@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  pyspark-service:
+    build:
+      context: .
+    user: caio
+    working_dir: /opt/my_work_dir
+    image: pyspark-notebook
+    ports:
+      - 8086:8888
+      - 4040:4040
+    volumes:
+      - .:/opt/my_work_dir
+      - ./datalake:/datalake
